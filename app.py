@@ -111,8 +111,8 @@ def main():
                 estado_sel = st.selectbox("Estado (UF):", ESTADOS, index=ESTADOS.index('MT'))
                 st.divider()
                 filtro_codigo = st.text_input("Filtrar por Código:")
-                termos_contem = st.text_input("Contém (Parcial):")
-                termos_nao_contem = st.text_input("Não contém:")
+                termos_contem = st.text_area("Contém (Parcial):", height=150, help="Separe as palavras por vírgula ou quebra de linha.")
+                termos_nao_contem = st.text_area("Não contém:", height=150, help="Separe as palavras por vírgula ou quebra de linha.")
 
             abas_alvo = TIPOS_ANALISE[tipo_sel]
             lista_dfs = []
